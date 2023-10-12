@@ -20,9 +20,13 @@ export default {
                 120: "120px",
             },
 
+            // colors: {
+            //     "theme-color": "#3b82f6",
+            //     "theme-color-2": "#6ee7b7",
+            // },
             colors: {
-                "theme-color": "#361CC1",
-                "theme-color-2": "#FE7A7B",
+                "theme-color": "#4b6cb7",
+                "theme-color-2": "#4CAF50",
             },
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
