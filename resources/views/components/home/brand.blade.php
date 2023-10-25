@@ -1,3 +1,4 @@
+<!--====== Brand ======-->
 <div class="pt-24 brand-area">
     <div class="container">
         <div class="row">

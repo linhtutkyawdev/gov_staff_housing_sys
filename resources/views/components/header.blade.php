@@ -4,9 +4,11 @@
             <div class="row">
                 <div class="w-full">
                     <nav class="flex items-center justify-between navbar navbar-expand-lg">
-                        <a class="my-2 navbar-brand flex items-center" href="index">
+                        <a class="my-2 navbar-brand flex items-center" href="/">
                             <img class="w-12 h-12 mr-4" src={{ @config('constants.LOGO_URL') }} alt="Logo">
-                            <div class="text-white text-4xl font-mono font-black"> GSHS</div>
+                            <div class="text-white text-4xl font-mono font-bold">
+                                {{ @config('constants.TITLE_SHORT') }}
+                            </div>
                         </a>
                         <button class="block navbar-toggler focus:outline-none lg:hidden" type="button"
                             data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne"
@@ -20,24 +22,25 @@
                             id="navbarOne">
                             <ul id="nav"
                                 class="items-center content-start mr-auto lg:justify-end navbar-nav lg:flex">
-                                <li class="nav-item active">
-                                    <a class="page-scroll" href="#home">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="page-scroll" href="#features">Features</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="page-scroll" href="#about">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="page-scroll" href="#facts">Why</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="page-scroll" href="#team">Team</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="page-scroll" href="#blog">Blog</a>
-                                </li>
+
+                                @forelse (@config('constants.NAV_LINKS') as $link)
+                                    @if ($loop->first)
+                                        <li class="nav-item active">
+                                            <a class="page-scroll"
+                                                href="#{{ strtolower($link) }}">{{ $link }}</a>
+                                        </li>
+                                        @continue
+                                    @endif
+
+                                    <li class="nav-item active">
+                                        <a class="page-scroll" href="#{{ strtolower($link) }}">{{ $link }}</a>
+                                    </li>
+                                @empty
+                                    <li class="nav-item active">
+                                        <a class="page-scroll" href="#">No Link</a>
+                                    </li>
+                                @endforelse
+
                             </ul>
                         </div> <!-- navbar collapse -->
 
@@ -65,7 +68,7 @@
                         <p class="mb-8 text-white text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
                             {{ @config('constants.DESCRIPTION') }}
                         </p>
-                        <a href="#" class="main-btn gradient-btn gradient-btn-2 wow fadeInUp"
+                        <a href="#step-1" class="main-btn gradient-btn gradient-btn-2 wow fadeInUp"
                             data-wow-duration="1.3s" data-wow-delay="1.1s">{{ @config('constants.CTA_TEXT_2') }}</a>
                     </div> <!-- header hero content -->
                 </div>

@@ -77,9 +77,12 @@ p {
 }
 
 .navbar-nav .nav-item a {
-    @apply relative inline-block px-4 py-3 text-white capitalize duration-300 font-[600];
+    @apply relative inline-block px-4 py-3 text-white capitalize duration-300;
 }
-.sticky .navbar-nav .nav-item a,
+.sticky .navbar-nav .nav-item a {
+    @apply text-gray-900;
+}
+
 .show .navbar-nav .nav-item a {
     @apply text-gray-900;
 }
@@ -94,9 +97,9 @@ p {
 .gradient-btn {
     background-image: linear-gradient(
         to right,
-        #4b6cb7 0%,
-        #283858 50%,
-        #4b6cb7 100%
+        #fe8464 0%,
+        #fe6e9a 50%,
+        #fe8464 100%
     );
     background-size: 200% auto;
     overflow: hidden;
@@ -105,9 +108,9 @@ p {
 .gradient-btn-2 {
     background-image: linear-gradient(
         to right,
-        rgb(110 231 183) 0%,
-        rgb(34 197 94) 50%,
-        rgb(110 231 183) 100%
+        #33c8c1 0%,
+        #119bd2 50%,
+        #33c8c1 100%
     );
 }
 
@@ -121,23 +124,6 @@ p {
 }
 .main-btn:hover {
     @apply bg-blue-400;
-}
-
-.navbar .main-btn {
-    background-image: linear-gradient(
-        to right,
-        #7489bb 0%,
-        #374b72 50%,
-        #7489bb 100%
-    );
-}
-.sticky .main-btn {
-    background-image: linear-gradient(
-        to right,
-        #4b6cb7 0%,
-        #283858 50%,
-        #4b6cb7 100%
-    );
 }
 
 .header-hero {
@@ -154,7 +140,7 @@ p {
 }
 
 .section-title .line {
-    background-image: linear-gradient(rgb(110 231 183), rgb(34 197 94));
+    background: linear-gradient(#fe8464 0%, #fe6e9a 100%);
     @apply w-40 h-1 mb-3;
 }
 
@@ -219,13 +205,13 @@ p {
     @apply absolute top-0 left-0 w-full h-full transform -rotate-45;
 }
 .counter-color-1::before {
-    background-image: linear-gradient(#4b6cb7 0%, #283858 100%);
+    background-image: linear-gradient(#33c8c1 0%, #119bd2 100%);
 }
 .counter-color-2::before {
-    background-image: linear-gradient(rgb(110 231 183), rgb(34 197 94));
+    background-image: linear-gradient(#fe8464 0%, #fe6e9a 100%);
 }
 .counter-color-3::before {
-    background-image: linear-gradient(#fe8464 0%, #fe6e9a 100%);
+    background-image: linear-gradient(#361cc1 0%, #2e82ef 100%);
 }
 
 .single-team {
@@ -244,7 +230,7 @@ p {
 }
 .team-social ul::before {
     content: "";
-    background-image: linear-gradient(rgb(110 231 183), rgb(34 197 94));
+    background-image: linear-gradient(#fe8464 0%, #fe6e9a 100%);
     z-index: -1;
     @apply absolute top-0 left-0 invisible w-full h-full duration-300 opacity-0;
 }
@@ -255,7 +241,7 @@ p {
     @apply inline-block px-3 py-4 text-white duration-300;
 }
 .team-social ul a:hover {
-    @apply text-theme-color-2;
+    @apply text-theme-color;
 }
 
 .single-testimonial {
@@ -330,7 +316,7 @@ p {
 }
 
 .back-to-top {
-    background-image: linear-gradient(rgb(110 231 183), rgb(34 197 94));
+    background-image: linear-gradient(to right, #361cc1 0%, #2e82ef 100%);
     background-size: 200% auto;
     @apply fixed bottom-0 right-0 z-20 flex items-center justify-center w-10 h-10 mb-8 mr-8 overflow-hidden text-white duration-300 rounded;
 }
