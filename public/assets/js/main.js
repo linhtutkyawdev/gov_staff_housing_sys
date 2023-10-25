@@ -15,12 +15,16 @@ $(function () {
                 "src",
                 "assets/images/logo.svg"
             );
+            $(".navbar .navbar-brand div").removeClass("text-theme-color");
+            $(".navbar .navbar-brand div").addClass("text-white");
         } else {
             $(".navbar-area").addClass("sticky");
             $(".navbar .navbar-brand img").attr(
                 "src",
                 "assets/images/logo-2.svg"
             );
+            $(".navbar .navbar-brand div").removeClass("text-white");
+            $(".navbar .navbar-brand div").addClass("text-theme-color");
         }
     });
 

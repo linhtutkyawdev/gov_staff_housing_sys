@@ -4,8 +4,9 @@
             <div class="row">
                 <div class="w-full">
                     <nav class="flex items-center justify-between navbar navbar-expand-lg">
-                        <a class="mr-4 navbar-brand" href="index.html">
-                            <img src="assets/images/logo.svg" alt="Logo">
+                        <a class="my-2 navbar-brand flex items-center" href="index">
+                            <img class="w-12 h-12 mr-4" src={{ @config('constants.LOGO_URL') }} alt="Logo">
+                            <div class="text-white text-4xl font-mono font-black"> GSHS</div>
                         </a>
                         <button class="block navbar-toggler focus:outline-none lg:hidden" type="button"
                             data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne"
@@ -42,8 +43,8 @@
 
                         <div
                             class="absolute right-0 hidden mt-2 mr-24 navbar-btn sm:inline-block lg:mt-0 lg:static lg:mr-0">
-                            <a class="main-btn gradient-btn" data-scroll-nav="0" href="#" rel="nofollow">Download
-                                Now</a>
+                            <a class="main-btn gradient-btn" data-scroll-nav="0" href="#"
+                                rel="nofollow">{{ @config('constants.CTA_TEXT') }}</a>
                         </div>
                     </nav> <!-- navbar -->
                 </div>
@@ -57,15 +58,15 @@
                 <div class="w-full lg:w-2/3">
                     <div class="pt-32 mb-12 text-center lg:pt-48 header-hero-content">
                         <h3 class="text-4xl font-light leading-tight text-white header-sub-title wow fadeInUp"
-                            data-wow-duration="1.3s" data-wow-delay="0.2s">Basic - SaaS Landing Page</h3>
+                            data-wow-duration="1.3s" data-wow-delay="0.2s">{{ @config('constants.TITLE_SHORT') }} -
+                            {{ @config('constants.TITLE') }}</h3>
                         <h2 class="mb-3 text-4xl font-bold text-white header-title wow fadeInUp"
-                            data-wow-duration="1.3s" data-wow-delay="0.5s">Kickstart Your SaaS or App Site</h2>
+                            data-wow-duration="1.3s" data-wow-delay="0.5s">{{ @config('constants.QUOTE') }}</h2>
                         <p class="mb-8 text-white text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                            tempor
+                            {{ @config('constants.DESCRIPTION') }}
                         </p>
                         <a href="#" class="main-btn gradient-btn gradient-btn-2 wow fadeInUp"
-                            data-wow-duration="1.3s" data-wow-delay="1.1s">Get Started</a>
+                            data-wow-duration="1.3s" data-wow-delay="1.1s">{{ @config('constants.CTA_TEXT_2') }}</a>
                     </div> <!-- header hero content -->
                 </div>
             </div> <!-- row -->
