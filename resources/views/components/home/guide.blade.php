@@ -11,7 +11,7 @@
                         the opportunity to access the official housing application form, a vital document required to
                         initiate the application process. Click the following download button to doenlad the form. This
                         form is for submitting physically.</p>
-                    <a href="javascript:void(0)" class="main-btn gradient-btn">Download Form</a>
+                    <a href="{{ route('download') }}" class="main-btn gradient-btn">Download Form</a>
                 </div> <!-- about content -->
             </div>
             <div class="w-full lg:w-1/2">

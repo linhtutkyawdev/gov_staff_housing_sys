@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DownloadFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +24,7 @@ Route::view('dashboard', 'dashboard')
 Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
+
+Route::get('download', DownloadFormController::class)->name('download');
 
 require __DIR__.'/auth.php';

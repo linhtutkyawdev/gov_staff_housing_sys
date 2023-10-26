@@ -54,8 +54,9 @@
 
                         <div
                             class="absolute right-0 hidden mt-2 mr-24 navbar-btn sm:inline-block lg:mt-0 lg:static lg:mr-0">
-                            <a class="main-btn gradient-btn" data-scroll-nav="0" href="#"
+                            <a class="main-btn gradient-btn" data-scroll-nav="0" href="{{ route('download') }}"
                                 rel="nofollow">{{ @config('constants.CTA_TEXT') }}</a>
+
                         </div>
                     </nav> <!-- navbar -->
                 </div>
