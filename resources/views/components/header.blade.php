@@ -77,7 +77,7 @@
                         <p class="mb-8 text-white text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
                             {{ @config('constants.DESCRIPTION') }}
                         </p>
-                        <a href="#guide" class="main-btn gradient-btn gradient-btn-2 wow fadeInUp"
+                        <a href="#guide" class="page-scroll main-btn gradient-btn gradient-btn-2 wow fadeInUp"
                             data-wow-duration="1.3s" data-wow-delay="1.1s">{{ @config('constants.CTA_TEXT_2') }}</a>
                     </div> <!-- header hero content -->
                 </div>

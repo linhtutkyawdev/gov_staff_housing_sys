@@ -16,6 +16,7 @@ use App\Http\Controllers\DownloadFormController;
 
 Route::view('/', 'welcome');
 Route::view('testMain', 'testMain');
+Route::view('testGatherInfo', 'testGatherInfo');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
