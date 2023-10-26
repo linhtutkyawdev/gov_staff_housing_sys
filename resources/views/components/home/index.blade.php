@@ -1,8 +1,8 @@
 <!--====== Home ======-->
-<x-home.about />
+<x-home.guide />
 <x-home.services />
-<x-home.brand />
-<x-home.video-counter />
-<x-home.teams />
-<x-home.testimonials />
-<x-home.blog />
+<x-home.status-intro />
+{{-- <x-home.brand /> --}}
+{{-- <x-home.teams /> --}}
+{{-- <x-home.testimonials /> --}}
+{{-- <x-home.blog /> --}}

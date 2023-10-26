@@ -1,4 +1,4 @@
-<section id="facts" class="pt-20 video-counter">
+<section id="status-intro" class="pt-20 video-counter">
     <div class="container">
         <div class="row">
             <div class="w-full lg:w-1/2">
@@ -22,31 +22,25 @@
                     <div class="counter-content">
                         <div class="mb-8 section-title">
                             <div class="line"></div>
-                            <h3 class="title">Cool facts <span> about this app</span></h3>
+                            <h3 class="title">Check Status <span> of your application. </span></h3>
                         </div> <!-- section title -->
-                        <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seiam nonumy
-                            eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                        </p>
+                        <p class="text">Stay informed about the progress of your housing application. You can
+                            easily
+                            track the status of your application, whether it's pending, approved, or rejected. </p>
                     </div> <!-- counter content -->
                     <div class="row no-gutters">
-                        <div class="flex items-center justify-center single-counter counter-color-1">
+                        <button class="flex items-center justify-center single-counter counter-color-1">
                             <div class="text-center counter-items">
-                                <span class="text-2xl font-bold text-white"><span class="counter">125</span>K</span>
+                                <span class="text-2xl font-bold text-white"><span class="counter">125</span></span>
                                 <p class="text-white">Downloads</p>
                             </div>
-                        </div> <!-- single counter -->
-                        <div class="flex items-center justify-center single-counter counter-color-2">
+                        </button> <!-- single counter -->
+                        <button class="flex items-center justify-center single-counter counter-color-2">
                             <div class="text-center counter-items">
-                                <span class="text-2xl font-bold text-white"><span class="counter">87</span>K</span>
-                                <p class="text-white">Active Users</p>
+                                <span class="text-2xl font-bold text-white"><span class="counter">87</span></span>
+                                <p class="text-white">Filled Info</p>
                             </div>
-                        </div> <!-- single counter -->
-                        <div class="flex items-center justify-center single-counter counter-color-3">
-                            <div class="text-center counter-items">
-                                <span class="text-2xl font-bold text-white"><span class="counter">4.8</span></span>
-                                <p class="text-white">User Rating</p>
-                            </div>
-                        </div> <!-- single counter -->
+                        </button> <!-- single counter -->
                     </div> <!-- row -->
                 </div> <!-- counter wrapper -->
             </div>

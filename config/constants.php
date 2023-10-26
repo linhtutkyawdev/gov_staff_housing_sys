@@ -4,7 +4,7 @@ return [
     'TITLE' => 'Government Staff Housing System',
     'TITLE_SHORT' => 'GSHS',
     'LOGO_URL' => 'assets/images/logo.svg',
-    'NAV_LINKS' => ["Home","Guide","About","Team"],
+    'NAV_LINKS' => ["Home","Guide","Services","Status"],
     'CTA_TEXT' => 'Download Form',
     'CTA_TEXT_2' => 'Get Started',
     'QUOTE' => 'Here\'s your guide.',

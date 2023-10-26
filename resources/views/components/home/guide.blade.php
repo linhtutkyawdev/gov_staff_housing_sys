@@ -9,7 +9,8 @@
                     </div> <!-- section title -->
                     <p class="mb-8">The first step is to "Download an Application Form." This step offers applicants
                         the opportunity to access the official housing application form, a vital document required to
-                        initiate the application process. Click the following download button to doenlad the form.</p>
+                        initiate the application process. Click the following download button to doenlad the form. This
+                        form is for submitting physically.</p>
                     <a href="javascript:void(0)" class="main-btn gradient-btn">Download Form</a>
                 </div> <!-- about content -->
             </div>
@@ -39,14 +40,12 @@
                         <div class="line"></div>
                         <h3 class="title">Second Step <span> is to Enter Essential Informations</span></h3>
                     </div> <!-- section title -->
-                    <p class="mb-8">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seiam nonumy
-                        eirmod
-                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
-                        et
-                        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                        sanctus
-                        est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.</p>
-                    <a href="javascript:void(0)" class="main-btn gradient-btn">Try it Free</a>
+                    <p class="mb-8">During this step, applicants are prompted to provide fundamental details required
+                        for their housing application. This typically includes personal information, employment history,
+                        family size, and other key criteria necessary for evaluating their eligibility for government
+                        housing. </p>
+                    <a href="javascript:void(0)" class="main-btn gradient-btn gradient-btn-2">Fill Essential
+                        Information</a>
                 </div> <!-- about content -->
             </div>
             <div class="w-full lg:w-1/2 lg:order-first">

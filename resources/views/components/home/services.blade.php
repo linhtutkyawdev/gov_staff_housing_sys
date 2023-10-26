@@ -1,4 +1,4 @@
-<section id="features" class="services-area pt-120">
+<section id="services" class="services-area pt-120">
     <div class="container">
         <div class="justify-center row">
             <div class="w-full lg:w-2/3">
@@ -21,7 +21,7 @@
                         <h4 class="mb-8 text-xl font-bold text-gray-900">{{ @config('constants.FEATURES')[0]['title'] }}
                         </h4>
                         <p class="mb-8">{{ @config('constants.FEATURES')[0]['desc'] }}</p>
-                        <a class="duration-300 hover:text-theme-color" href="javascript:void(0)">Learn More <i
+                        <a class="duration-300 hover:text-theme-color" href="#guide">Try <i
                                 class="ml-2 lni lni-chevron-right"></i></a>
                     </div>
                 </div> <!-- single services -->
@@ -34,10 +34,10 @@
                         <i class="lni lni-cog"></i>
                     </div>
                     <div class="mt-8 services-content">
-                        <h4 class="mb-8 text-xl font-bold text-gray-900">Robust</h4>
-                        <p class="mb-8">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu
-                            eirmod tempor invidunt labore.</p>
-                        <a class="duration-300 hover:text-theme-color" href="javascript:void(0)">Learn More <i
+                        <h4 class="mb-8 text-xl font-bold text-gray-900">Application Status Tracking</h4>
+                        <p class="mb-8">Applicants can conveniently track the progress of their housing application
+                            through the system, reducing the need for direct inquiries.</p>
+                        <a class="duration-300 hover:text-theme-color" href="#status-intro">Try <i
                                 class="ml-2 lni lni-chevron-right"></i></a>
                     </div>
                 </div> <!-- single services -->
@@ -50,10 +50,10 @@
                         <i class="lni lni-bolt-alt"></i>
                     </div>
                     <div class="mt-8 services-content">
-                        <h4 class="mb-8 text-xl font-bold text-gray-900">Powerful</h4>
-                        <p class="mb-8">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu
-                            eirmod tempor invidunt labore.</p>
-                        <a class="duration-300 hover:text-theme-color" href="javascript:void(0)">Learn More <i
+                        <h4 class="mb-8 text-xl font-bold text-gray-900">Scoring System</h4>
+                        <p class="mb-8">A robust scoring system allows administrators to assess and rank applicants
+                            based on specific criteria, ensuring transparent and data-driven housing allocation.</p>
+                        <a class="duration-300 hover:text-theme-color" href="/testMain">Try <i
                                 class="ml-2 lni lni-chevron-right"></i></a>
                     </div>
                 </div> <!-- single services -->
