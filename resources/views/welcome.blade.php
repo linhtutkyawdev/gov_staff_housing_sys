@@ -7,7 +7,7 @@
     <meta name="description" content="">
 
     <!--====== Title ======-->
-    <title>{{ @config('constants.TITLE_SHORT') }}</title>
+    <title>{{ __('messages.TITLE_SHORT') }}</title>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/logo.svg" type="image/svg">

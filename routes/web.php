@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DownloadFormController;
+use App\Http\Controllers\LocaleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +28,7 @@ Route::view('profile', 'profile')
     ->name('profile');
 
 Route::get('download', DownloadFormController::class)->name('download');
+Route::get('change-locale/{locale}', LocaleController::class)->name('change-locale');
+
 
 require __DIR__.'/auth.php';

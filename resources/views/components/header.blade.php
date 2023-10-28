@@ -5,9 +5,9 @@
                 <div class="w-full">
                     <nav class="flex items-center justify-between navbar navbar-expand-lg">
                         <a class="my-2 navbar-brand flex items-center" href="/">
-                            <img class="w-12 h-12 mr-4" src={{ @config('constants.LOGO_URL') }} alt="Logo">
+                            <img class="w-12 h-12 mr-4" src={{ __('messages.LOGO_URL') }} alt="Logo">
                             <div class="text-white text-4xl font-mono font-bold">
-                                {{ @config('constants.TITLE_SHORT') }}
+                                {{ __('messages.TITLE_SHORT') }}
                             </div>
                         </a>
                         <button class="block navbar-toggler focus:outline-none lg:hidden" type="button"
@@ -23,7 +23,7 @@
                             <ul id="nav"
                                 class="items-center content-start mr-auto lg:justify-end navbar-nav lg:flex">
 
-                                @forelse (@config('constants.NAV_LINKS') as $link)
+                                @forelse (__('messages.NAV_LINKS') as $link)
                                     @if ($loop->first)
                                         <li class="nav-item active">
                                             <a class="page-scroll"
@@ -32,15 +32,7 @@
                                         @continue
                                     @endif
 
-                                    @if ($loop->last)
-                                        <li class="nav-item active">
-                                            <a class="page-scroll"
-                                                href="/{{ strtolower($link) }}">{{ $link }}</a>
-                                        </li>
-                                        @continue
-                                    @endif
-
-                                    <li class="nav-item active">
+                                    <li class="nav-item">
                                         <a class="page-scroll" href="#{{ strtolower($link) }}">{{ $link }}</a>
                                     </li>
                                 @empty
@@ -53,10 +45,21 @@
                         </div> <!-- navbar collapse -->
 
                         <div
-                            class="absolute right-0 hidden mt-2 mr-24 navbar-btn sm:inline-block lg:mt-0 lg:static lg:mr-0">
-                            <a class="main-btn gradient-btn" data-scroll-nav="0" href="{{ route('download') }}"
-                                rel="nofollow">{{ @config('constants.CTA_TEXT') }}</a>
-
+                            class="absolute right-0 hidden mt-2 mr-24 navbar-btn navbar-nav sm:inline-block lg:mt-0 lg:static lg:mr-0">
+                            <div class="flex">
+                                <div class="items-center space-x-4 nav-item">
+                                    @foreach (config('languages') as $key => $language)
+                                        @if ($key === app()->getLocale())
+                                            @continue
+                                        @endif
+                                        <a
+                                            href="{{ route('change-locale', ['locale' => $key]) }}">{{ strtoUpper($key) }}</a>
+                                    @endforeach
+                                </div>
+                                {{-- <a href={{ route('change-locale', ['locale' => locale]) }}>{{ strtoupper(locale) }}</a> --}}
+                                <a class="main-btn gradient-btn text-white" data-scroll-nav="0"
+                                    href="{{ route('download') }}" rel="nofollow">{{ __('messages.CTA_TEXT') }}</a>
+                            </div>
                         </div>
                     </nav> <!-- navbar -->
                 </div>
@@ -70,15 +73,15 @@
                 <div class="w-full lg:w-2/3">
                     <div class="pt-32 mb-12 text-center lg:pt-48 header-hero-content">
                         <h3 class="text-4xl font-light leading-tight text-white header-sub-title wow fadeInUp"
-                            data-wow-duration="1.3s" data-wow-delay="0.2s">{{ @config('constants.TITLE_SHORT') }} -
-                            {{ @config('constants.TITLE') }}</h3>
+                            data-wow-duration="1.3s" data-wow-delay="0.2s">{{ __('messages.TITLE_SHORT') }} -
+                            {{ __('messages.TITLE') }}</h3>
                         <h2 class="mb-3 text-4xl font-bold text-white header-title wow fadeInUp"
-                            data-wow-duration="1.3s" data-wow-delay="0.5s">{{ @config('constants.QUOTE') }}</h2>
+                            data-wow-duration="1.3s" data-wow-delay="0.5s">{{ __('messages.QUOTE') }}</h2>
                         <p class="mb-8 text-white text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
-                            {{ @config('constants.DESCRIPTION') }}
+                            {{ __('messages.DESCRIPTION') }}
                         </p>
                         <a href="#guide" class="page-scroll main-btn gradient-btn gradient-btn-2 wow fadeInUp"
-                            data-wow-duration="1.3s" data-wow-delay="1.1s">{{ @config('constants.CTA_TEXT_2') }}</a>
+                            data-wow-duration="1.3s" data-wow-delay="1.1s">{{ __('messages.CTA_TEXT_2') }}</a>
                     </div> <!-- header hero content -->
                 </div>
             </div> <!-- row -->

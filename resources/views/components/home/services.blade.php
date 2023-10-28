@@ -4,8 +4,8 @@
             <div class="w-full lg:w-2/3">
                 <div class="pb-10 text-center section-title">
                     <div class="m-auto line"></div>
-                    <h3 class="title">{{ @config('constants.FEATURES_TITLE') }}, <span>
-                            {{ @config('constants.FEATURES_DESC') }} </span></h3>
+                    <h3 class="title">{{ __('messages.FEATURES_TITLE') }}, <span>
+                            {{ __('messages.FEATURES_DESC') }} </span></h3>
                 </div> <!-- section title -->
             </div>
         </div> <!-- row -->
@@ -18,9 +18,10 @@
                         <i class="lni lni-baloon"></i>
                     </div>
                     <div class="mt-8 services-content">
-                        <h4 class="mb-8 text-xl font-bold text-gray-900">{{ @config('constants.FEATURES')[0]['title'] }}
+                        <h4 class="mb-8 text-xl font-bold text-gray-900">
+                            {{ __('messages.FEATURES')[0]['title'] }}
                         </h4>
-                        <p class="mb-8">{{ @config('constants.FEATURES')[0]['desc'] }}</p>
+                        <p class="mb-8">{{ __('messages.FEATURES')[0]['desc'] }}</p>
                         <a class="duration-300 hover:text-theme-color" href="#guide">Try <i
                                 class="ml-2 lni lni-chevron-right"></i></a>
                     </div>

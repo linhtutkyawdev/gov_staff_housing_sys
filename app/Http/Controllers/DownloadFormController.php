@@ -12,6 +12,6 @@ class DownloadFormController extends Controller
      */
     public function __invoke()
     {
-        return response()->download("downloads/form.docx", @config('constants.FORM_NAME').'.docx');
+        return response()->download("downloads/form.docx", __('messages.FORM_NAME').'.docx');
     }
 }

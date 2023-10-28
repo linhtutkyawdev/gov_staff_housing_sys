@@ -5,13 +5,12 @@
                 <div class="mx-4 mt-12 about-content wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
                     <div class="mb-4 section-title">
                         <div class="line"></div>
-                        <h3 class="title">First Step <span> is to Download an Application Form</span></h3>
+                        <h3 class="title">{{ __('messages.GUIDE')[0]['title'] }} <span>
+                                {{ __('messages.GUIDE')[0]['sub-title'] }}</span></h3>
                     </div> <!-- section title -->
-                    <p class="mb-8">The first step is to "Download an Application Form." This step offers applicants
-                        the opportunity to access the official housing application form, a vital document required to
-                        initiate the application process. Click the following download button to doenlad the form. This
-                        form is for submitting physically.</p>
-                    <a href="{{ route('download') }}" class="main-btn gradient-btn">Download Form</a>
+                    <p class="mb-8">{{ __('messages.GUIDE')[0]['desc'] }}</p>
+                    <a href="{{ route('download') }}"
+                        class="main-btn gradient-btn">{{ __('messages.GUIDE')[0]['cta'] }}</a>
                 </div> <!-- about content -->
             </div>
             <div class="w-full lg:w-1/2">
@@ -38,14 +37,12 @@
                 <div class="mx-4 mt-12 about-content wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
                     <div class="mb-4 section-title">
                         <div class="line"></div>
-                        <h3 class="title">Second Step <span> is to Enter Essential Informations</span></h3>
+                        <h3 class="title">{{ __('messages.GUIDE')[1]['title'] }}<span>
+                                {{ __('messages.GUIDE')[1]['sub-title'] }}</span></h3>
                     </div> <!-- section title -->
-                    <p class="mb-8">During this step, applicants are prompted to provide fundamental details required
-                        for their housing application. This typically includes personal information, employment history,
-                        family size, and other key criteria necessary for evaluating their eligibility for government
-                        housing. </p>
-                    <a href="javascript:void(0)" class="main-btn gradient-btn gradient-btn-2">Fill Essential
-                        Information</a>
+                    <p class="mb-8">{{ __('messages.GUIDE')[1]['desc'] }}</p>
+                    <a href="javascript:void(0)"
+                        class="main-btn gradient-btn gradient-btn-2">{{ __('messages.GUIDE')[1]['cta'] }}</a>
                 </div> <!-- about content -->
             </div>
             <div class="w-full lg:w-1/2 lg:order-first">
