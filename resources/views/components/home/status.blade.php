@@ -13,12 +13,7 @@
                             track the status of your application, whether it's pending, approved, or rejected. </p>
                     </div> <!-- counter content -->
                     <div class="row no-gutters">
-                        <button class="flex items-center justify-center single-counter counter-color-1">
-                            <div class="text-center counter-items">
-                                <span class="text-2xl font-bold text-white"><span class="counter">125</span></span>
-                                <p class="text-white">Downloads</p>
-                            </div>
-                        </button> <!-- single counter -->
+                        <livewire:welcome.download_count_button />
                         <button class="flex items-center justify-center single-counter counter-color-2">
                             <div class="text-center counter-items">
                                 <span class="text-2xl font-bold text-white"><span class="counter">87</span></span>
