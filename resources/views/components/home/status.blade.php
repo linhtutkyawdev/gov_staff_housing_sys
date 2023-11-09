@@ -14,12 +14,13 @@
                     </div> <!-- counter content -->
                     <div class="row no-gutters">
                         <livewire:welcome.download_count_button />
-                        <button class="flex items-center justify-center single-counter counter-color-2">
+                        <livewire:welcome.filled_info_count_button />
+                        {{-- <button class="flex items-center justify-center single-counter counter-color-2">
                             <div class="text-center counter-items">
                                 <span class="text-2xl font-bold text-white"><span class="counter">87</span></span>
                                 <p class="text-white">Filled Info</p>
                             </div>
-                        </button> <!-- single counter -->
+                        </button> <!-- single counter --> --}}
                     </div> <!-- row -->
                 </div> <!-- counter wrapper -->
             </div>

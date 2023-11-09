@@ -7,8 +7,8 @@
                 <div class="w-full lg:w-1/2">
                     <div class="lg:mt-12 subscribe-content">
                         <h2 class="text-2xl font-bold sm:text-4xl subscribe-title">
-                            Subscribe Our Newsletter
-                            <span class="block font-normal">get reguler updates</span>
+                            {{ __('messages.FOOTER.prompt') }}
+                            <span class="block font-normal">{{ __('messages.FOOTER.sub-prompt') }}</span>
                         </h2>
                     </div>
                 </div>
@@ -17,7 +17,7 @@
                         <form action="#" class="relative focus:outline-none">
                             <input type="email" placeholder="Enter eamil"
                                 class="w-full py-4 pl-6 pr-40 duration-300 border-2 rounded focus:border-theme-color focus:outline-none">
-                            <button class="main-btn gradient-btn">Subscribe</button>
+                            <button class="main-btn gradient-btn">{{ __('messages.FOOTER.submit') }}</button>
                         </form>
                     </div>
                 </div>
@@ -30,10 +30,7 @@
                         <a class="inline-block mb-8 logo" href="/">
                             <img src="assets/images/logo.svg" alt="logo" class="w-40">
                         </a>
-                        <p class="pb-10 pr-10 leading-snug text-white">Lorem ipsum dolor sit amet consetetur
-                            sadipscing elitr, sederfs diam nonumy eirmod tempor invidunt ut labore et dolore
-                            magna
-                            aliquyam.</p>
+                        <p class="pb-10 pr-10 leading-snug text-white">{{ __('messages.DESCRIPTION') }}</p>
                         <ul class="flex footer-social">
                             <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
                             <li><a href="javascript:void(0)"><i class="lni lni-twitter-filled"></i></a></li>
@@ -92,11 +89,8 @@
         </div> <!-- footer widget -->
         <div class="py-8 border-t border-gray-200 footer-copyright">
             <p class="text-white">
-                Template by <a class="duration-300 hover:text-theme-color-2" href="https://tailwindtemplates.co"
-                    rel="nofollow" target="_blank">TailwindTemplates</a>
-                and
-                <a class="duration-300 hover:text-theme-color-2" href="https://uideck.com" rel="nofollow"
-                    target="_blank">UIdeck</a>
+                All rights served by <a class="duration-300 hover:text-green-300 cursor-pointer" rel="nofollow"
+                    target="_blank">GSHS</a>
             </p>
         </div> <!-- footer copyright -->
     </div> <!-- container -->

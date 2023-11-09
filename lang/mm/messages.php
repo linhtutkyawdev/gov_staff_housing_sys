@@ -39,5 +39,9 @@ return  [
             'title'=> 'Application Status Tracking',
             'desc'=> 'Applicants can conveniently track the progress of their housing application through the system, providing transparency and reducing the need for direct inquiries.'
         ]
-    ]
+    ],
+    
+    //RULES
+    'RANKS' => ['r1','r2','r3','rm4','rm5','rm6'],
+    'ACCOMODATION_SITUATIONS' => ['A1','A2','A3','A4'],
 ];

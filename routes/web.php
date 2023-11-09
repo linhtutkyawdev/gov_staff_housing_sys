@@ -17,18 +17,18 @@ use App\Http\Controllers\LocaleController;
 
 Route::view('/', 'welcome');
 Route::view('testMain', 'testMain');
-Route::view('testGatherInfo', 'testGatherInfo');
+Route::view('gather-info', 'gather-info');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+// Route::view('dashboard', 'dashboard')
+//     ->middleware(['auth', 'verified'])
+//     ->name('dashboard');
 
-Route::view('profile', 'profile')
-    ->middleware(['auth'])
-    ->name('profile');
+// Route::view('profile', 'profile')
+//     ->middleware(['auth'])
+//     ->name('profile');
 
 Route::get('download', DownloadFormController::class)->name('download');
 Route::get('change-locale/{locale}', LocaleController::class)->name('change-locale');
 
 
-require __DIR__.'/auth.php';
+// require __DIR__.'/auth.php';

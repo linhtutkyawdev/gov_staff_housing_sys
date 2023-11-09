@@ -39,5 +39,36 @@ return  [
             'title'=> 'Application Status Tracking',
             'desc'=> 'Applicants can conveniently track the progress of their housing application through the system, providing transparency and reducing the need for direct inquiries.'
         ]
-    ]
+    ],
+    'FORM' => [
+        'title'=> 'Personal Information',
+        'desc'=> 'Please enter your information after you have physically submtted the form.',
+        'fields' => [
+            'Full name',
+            'NRIC',
+            'Age',
+            'Experience',
+            // 'လက်ရှိ ရာထူး',
+            'Current rank',
+            'Together living family count',
+            'Together living elders and kids count',
+            'Accomodation situation',
+            'Physically form submitted date',
+            'Moved to state date',
+            'Your partner\'s also a staff here',
+            'Special situation'
+        ],
+        'DEFAULT_SELECT'=>'Please Choose',
+    ],
+    
+    'FOOTER' =>[
+        'prompt'=>'Hello',
+        'sub-prompt'=> 'Say hello',
+        'submit'=> 'Click',
+        
+    ],
+    
+    // RULE_OPTIONS
+    'RANKS' => ['r1','r2','r3','r4','r5','r6'],
+    'ACCOMODATION_SITUATIONS' => ['A1','A2','A3','A4'],
 ];
