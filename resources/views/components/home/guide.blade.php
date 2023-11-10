@@ -41,7 +41,7 @@
                                 {{ __('messages.GUIDE')[1]['sub-title'] }}</span></h3>
                     </div> <!-- section title -->
                     <p class="mb-8">{{ __('messages.GUIDE')[1]['desc'] }}</p>
-                    <a href="javascript:void(0)"
+                    <a href="/gather-info"
                         class="main-btn gradient-btn gradient-btn-2">{{ __('messages.GUIDE')[1]['cta'] }}</a>
                 </div> <!-- about content -->
             </div>

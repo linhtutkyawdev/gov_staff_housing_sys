@@ -6,6 +6,7 @@ use App\Http\Requests\InfoRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 use App\Models\VerifiedApplication;
+use App\Models\Info;
 
 /**
  * Class InfoCrudController
@@ -39,7 +40,7 @@ class InfoCrudController extends CrudController
             'name'        => 'rank',
             'label'       => "Rank",
             'type'        => 'select_from_array',
-            'options'     => ['one' => 'One', 'two' => 'Two'],
+            'options'     => __('messages.RANKS'),
             'allows_null' => false,
         ]);
         CRUD::field('family_count');
@@ -48,7 +49,7 @@ class InfoCrudController extends CrudController
             'name'        => 'accomodation_situation',
             'label'       => "Accomodation Situation",
             'type'        => 'select_from_array',
-            'options'     => ['one' => 'One', 'two' => 'Two'],
+            'options'     => __('messages.ACCOMODATION_SITUATIONS'),
             'allows_null' => false,
         ]);
         CRUD::field('physically_form_submitted_date');
@@ -57,10 +58,11 @@ class InfoCrudController extends CrudController
             'name'        => 'both_couple_are_staffs_in_same_city',
             'label'       => "Both are staffs in same city",
             'type'        => 'select_from_array',
-            'options'     => ['No' => 'No','Yes' => 'Yes'],
+            'options'     => ['No','Yes'],
             'allows_null' => false,
         ]);
         CRUD::field('special_situation')->type('textarea');
+        CRUD::field('verified')->type('hidden');
     }
 
     /**
@@ -71,24 +73,12 @@ class InfoCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+        if (! $this->crud->getRequest()->has('verified')){
+            $this->crud->orderBy('verified', 'asc');
+        }
         CRUD::setFromDb(); // set columns from db columns.
-        // CRUD::addButtonFromModelFunction('line', 'varify_application', 'varifyApplication', 'beginning');
         CRUD::addButtonFromView('line', 'verify_application', 'verifyApp', 'beginning');
-        // CRUD::modifyButton('Preview', 'view');
-        // CRUD::column('full_name');
-        // CRUD::column('nric');
-        // CRUD::column('age')->type('number');
-        // CRUD::column('experience');
-    
-        // CRUD::column('family_count');
-        // CRUD::column('elders_and_kids_count');
-        // CRUD::column('accomodation_situation');
-        // CRUD::column('phyaically_form_submitted_date');
-        // CRUD::column('moved_to_state_date');
-        // CRUD::column('both_couple_are_staffs_in_same_city');
-        // CRUD::column('special_situation');
         CRUD::orderButtons('line', [ 'verify_application','show','update','delete']);
-
 
         /**
          * Columns can be defined using the fluent syntax:
@@ -122,5 +112,26 @@ class InfoCrudController extends CrudController
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();
+    }
+    public function getInfo(string $id)
+    {
+        $score_row = VerifiedApplication::find($id);
+        $info_row = Info::where('nric', $score_row->nric)->first();
+        // echo $info_row;
+        echo '
+        <script>
+            window.location="/admin/info/'.$info_row->id.'/show";
+        </script>';
+    }
+
+    // override delete method
+    public function destroy($id)
+    {
+        CRUD::hasAccessOrFail('delete');
+        $info_row = Info::find($id);
+        $score_row = VerifiedApplication::where('nric', $info_row->nric)->first();
+        if($score_row)
+            $score_row->delete();
+        return CRUD::delete($id);
     }
 }

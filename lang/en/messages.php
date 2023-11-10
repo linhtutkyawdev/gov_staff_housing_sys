@@ -58,14 +58,25 @@ return  [
             'Your partner\'s also a staff here',
             'Special situation'
         ],
+        'placeholders'=>[
+            'full_name'=>'Mg Mg',
+            'nric'=>'0/KAKAKA(N)123456',
+            'age'=>'25',
+            'experience'=>'5',
+            'family_count'=>'5',
+            'elders_and_kids_count'=>'2',
+        ],
         'DEFAULT_SELECT'=>'Please Choose',
     ],
     
     'FOOTER' =>[
-        'prompt'=>'Hello',
-        'sub-prompt'=> 'Say hello',
-        'submit'=> 'Click',
-        
+        'prompt'=>'Check Your Status',
+        'prompt_found'=>'Hello ',
+        'prompt_not_found'=> 'Sorry, We can\'t find your NRIC. Make sure you have submitted the form digitally!',
+        'sub_prompt'=> 'Check the status of your application with your NRIC!',
+        'sub_prompt_found_valid'=> 'Congratulations, your informations are been varified! Wait for the administrators to contact you personally!',
+        'sub_prompt_found_pending'=> 'Unfortunately, your informations are still been varifying! It\'s is important to make sure the provided informations are correct!',
+        'submit'=> 'Check Now',
     ],
     
     // RULE_OPTIONS

@@ -20,5 +20,6 @@ Route::group([
     Route::crud('info', 'InfoCrudController');
     Route::get('info/{id}/verify', 'VerifiedApplicationCrudController@verify');
     Route::get('/{id}/addScore/{score}', 'VerifiedApplicationCrudController@add');
+    Route::get('verified-application/{id}/getInfo', 'InfoCrudController@getInfo');
     Route::crud('verified-application', 'VerifiedApplicationCrudController');
 }); // this should be the absolute last line of this file

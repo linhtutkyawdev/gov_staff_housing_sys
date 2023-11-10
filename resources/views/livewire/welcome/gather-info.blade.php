@@ -24,7 +24,7 @@ new class extends Component {
         'experience' => 'required|integer',
         'rank' => 'required|string',
         'family_count' => 'required|integer',
-        'elders_and_kids_count' => 'required|integer',
+        'elders_and_kids_count' => 'required|integer|lte:family_count',
         'accomodation_situation' => 'required|string',
         'physically_form_submitted_date' => 'required|date',
         'moved_to_state_date' => 'required|date',
@@ -54,6 +54,7 @@ new class extends Component {
                             class="block text-sm font-medium leading-6 text-gray-900">{{ __('messages.FORM.fields.0') }}</label>
                         <div class="mt-2">
                             <input type="text" wire:model="full_name" id="full_name" autocomplete="full_name"
+                                placeholder={{ __('messages.FORM.placeholders.full_name') }}
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             @error('full_name')
                                 <p class="text-red-500 text-sm italic">
@@ -67,6 +68,7 @@ new class extends Component {
                             class="block text-sm font-medium leading-6 text-gray-900">{{ __('messages.FORM.fields.1') }}</label>
                         <div class="mt-2">
                             <input type="text" wire:model="nric" id="nric" autocomplete="nric"
+                                placeholder={{ __('messages.FORM.placeholders.nric') }}
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             @error('nric')
                                 <p class="text-red-500 text-sm italic">
@@ -80,7 +82,7 @@ new class extends Component {
                             class="block text-sm font-medium leading-6 text-gray-900">{{ __('messages.FORM.fields.2') }}</label>
                         <div class="mt-2">
                             <input type="number" wire:model="age" id="age" autocomplete="age" min="18"
-                                max="60"
+                                max="100" placeholder={{ __('messages.FORM.placeholders.age') }}
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             @error('age')
                                 <p class="text-red-500 text-sm italic">
@@ -95,7 +97,8 @@ new class extends Component {
                             class="block text-sm font-medium leading-6 text-gray-900">{{ __('messages.FORM.fields.3') }}</label>
                         <div class="mt-2">
                             <input type="number" wire:model="experience" id="experience" autocomplete="experience"
-                                min="1" max="45"
+                                min="0" max="100"
+                                placeholder={{ __('messages.FORM.placeholders.experience') }}
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             @error('experience')
                                 <p class="text-red-500 text-sm italic">
@@ -130,6 +133,7 @@ new class extends Component {
                         <div class="mt-2">
                             <input type="number" wire:model="family_count" id="family_count"
                                 autocomplete="family_count" min="1" max="200" placeholder="2"
+                                placeholder={{ __('messages.FORM.placeholders.family_count') }}
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
 
                             @error('family_count')
@@ -146,7 +150,8 @@ new class extends Component {
                         </label>
                         <div class="mt-2">
                             <input type="number" wire:model="elders_and_kids_count" id="elders_and_kids_count"
-                                autocomplete="elders_and_kids_count" min="1" max="200" placeholder="0"
+                                autocomplete="elders_and_kids_count" min="0" max="200" placeholder="0"
+                                placeholder={{ __('messages.FORM.placeholders.elders_and_kids_count') }}
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                             @error('elders_and_kids_count')
                                 <p class="text-red-500 text-sm italic">
@@ -168,7 +173,7 @@ new class extends Component {
                                     <option>{{ $option }}</option>
                                 @endforeach
                             </select>
-                            @error('accomodation-situation')
+                            @error('accomodation_situation')
                                 <p class="text-red-500 text-sm italic">
                                     {{ $message }}</p>
                             @enderror
@@ -213,15 +218,15 @@ new class extends Component {
                         </label>
                         <div class="mt-3 relative flex gap-x-3">
                             <div class="flex items-center gap-x-3">
-                                <input id="no" wire:model="both_couple_are_staffs_in_same_city" type="radio"
-                                    name="radio" checked value="No"
+                                <input wire:model="both_couple_are_staffs_in_same_city" type="radio" name="radio"
+                                    value="No"
                                     class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
                                 <label for="no"
                                     class="block text-sm font-medium leading-6 text-gray-900">No</label>
                             </div>
                             <div class="flex items-center gap-x-3">
-                                <input id="yes" wire:model="both_couple_are_staffs_in_same_city "
-                                    type="radio" name="radio" value="Yes"
+                                <input wire:model="both_couple_are_staffs_in_same_city" type="radio" name="radio"
+                                    value="Yes"
                                     class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
                                 <label for="yes"
                                     class="block text-sm font-medium leading-6 text-gray-900">Yes</label>

@@ -30,7 +30,7 @@
     <x-preloader />
     <x-header />
     <x-home />
-    <x-footer />
+    <livewire:welcome.footer />
     <x-back-to-top />
 
     <x-external-js />

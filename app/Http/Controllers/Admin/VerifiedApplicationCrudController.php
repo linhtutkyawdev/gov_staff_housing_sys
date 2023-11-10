@@ -43,12 +43,20 @@ class VerifiedApplicationCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        if (! $this->crud->getRequest()->has('score')){
-            $this->crud->orderBy('score', 'desc');
+        if (! $this->crud->getRequest()->has('total_score')){
+            $this->crud->orderBy('total_score', 'desc');
         }
+        CRUD::column('nric');
+        CRUD::column('full_name');
+        CRUD::column('rank_score');
+        CRUD::column('experience_score');
+        CRUD::column('age_score');
+        CRUD::column('total_score');
         CRUD::setFromDb(); // set columns from db columns.
-        CRUD::column('score')->type('range')->striped(true)->showMaxValue(false)->showValue(true);
-        CRUD::removeButtons([ 'show','update'],'line');
+        
+        CRUD::addButtonFromView('line', 'show_info', 'showInfo', 'beginning');
+        CRUD::orderButtons('line', [ 'show_info', 'show', 'delete']);
+        CRUD::removeButtonFromStack('update','line');
         CRUD::removeAllButtonsFromStack('top');
 
         /**
@@ -88,9 +96,8 @@ class VerifiedApplicationCrudController extends CrudController
     public function verify(string $id)
     {
         $data = Info::find($id);
-        
         // Initialize score 
-        $score = 0;
+        $total_score = 0;
 
         // Helper for selects
         function getScoreForSelects(string $fieldCode, string $selectValue ) : int {
@@ -113,56 +120,88 @@ class VerifiedApplicationCrudController extends CrudController
         }
 
         // Get score for rank
-        $score += getScoreForSelects('RANKS', $data->rank);
+        $total_score += $rank_score = getScoreForSelects('RANKS', $data->rank);
         
         // Get score for experience
-        $score += config('rules.GET_SCORE_FOR_EXPERIENCE')($data->experience);
+        $total_score += $experience_score = config('rules.GET_SCORE_FOR_EXPERIENCE')($data->experience)?? 0;
 
         // Get score for age
-        $score += config('rules.GET_SCORE_FOR_AGE')($data->age);
+        $total_score += $age_score = config('rules.GET_SCORE_FOR_AGE')($data->age) ?? 0;
 
         // Get score for family count
-        $score += config('rules.GET_SCORE_FOR_FAMILY_COUNT')($data->family_count);
+        $total_score += $family_count_score = config('rules.GET_SCORE_FOR_FAMILY_COUNT')($data->family_count)?? 0;
         
-        // Get score for rank
-        $score += getScoreForSelects('ACCOMODATION_SITUATIONS', $data->accomodation_situation);
+        // Get score for accomodation
+        $total_score += $accomodation_situation_score = getScoreForSelects('ACCOMODATION_SITUATIONS', $data->accomodation_situation);
        
         // Get score for family count
-        $score += config('rules.GET_SCORE_FOR_ELDERS_AND_KIDS_COUNT')($data->elders_and_kids_count); 
+        $total_score += $elders_and_kids_count_score = config('rules.GET_SCORE_FOR_ELDERS_AND_KIDS_COUNT')($data->elders_and_kids_count)?? 0; 
         
         // Get score for wait time
-        $score += config('rules.GET_SCORE_FOR_WAIT_SINCE_FORM_SUBMITTED')(howLongHasItBeen($data->physically_form_submitted_date));
+        $total_score += $physically_form_submitted_date_score = config('rules.GET_SCORE_FOR_WAIT_SINCE_FORM_SUBMITTED')(howLongHasItBeen($data->physically_form_submitted_date));
         
         // Get score for staying long
-        $score += config('rules.GET_SCORE_FOR_WAIT_SINCE_MOVED_TO_STATE')(howLongHasItBeen($data->moved_to_state_date));
+        $total_score += $moved_to_state_date_score = config('rules.GET_SCORE_FOR_WAIT_SINCE_MOVED_TO_STATE')(howLongHasItBeen($data->moved_to_state_date));
         
-        if($data->both_couple_are_staffs_in_same_city === "Yes") $score += config('rules.WORK_IN_PAIRS_SCORES');
+        $total_score += $both_couple_are_staffs_in_same_city_score = ($data->both_couple_are_staffs_in_same_city === "Yes") ? config('rules.WORK_IN_PAIRS_SCORES'): 0;
+
 
         // Create a new record in the database
         VerifiedApplication::create([
             'nric' => $data->nric,
-            'score' => $score
+            'full_name'=>$data->full_name,
+            'age_score'=>$age_score,
+            'experience_score'=>$experience_score,
+            'rank_score'=>$rank_score,
+            'family_count_score'=>$family_count_score,
+            'elders_and_kids_count_score'=>$elders_and_kids_count_score,
+            'accomodation_situation_score'=>$accomodation_situation_score,
+            'physically_form_submitted_date_score'=>$physically_form_submitted_date_score,
+            'moved_to_state_date_score'=>$moved_to_state_date_score,
+            'both_couple_are_staffs_in_same_city_score'=>$both_couple_are_staffs_in_same_city_score,
+            'special_situation_score'=>0,
+            'total_score'=>$total_score
         ]);
 
-        echo'
-        <script>
-            let value = prompt("Special Situation : '.$data->special_situation.'\n\nPlease enter the score for the situation 0-15.");
-            while (value < 0 || value >15) 
-                value = prompt("Special Situation : '.$data->special_situation.'\n\nPlease enter the score for the situation 0-15.");
-            window.location="/admin/'.$data->id.'/addScore/"+value;
-        </script>';
+        if($data->special_situation)
+            echo'
+            <script>
+                let value = prompt("Special Situation : '.$data->special_situation.'\n\nPlease enter the score for the situation 0-15.");
+                while (value < 0 || value >15) 
+                    value = prompt("Special Situation : '.$data->special_situation.'\n\nPlease enter the score for the situation 0-15.");
+                window.location="/admin/'.$data->id.'/addScore/"+value;
+            </script>';
+        else
+            echo'
+            <script>
+                window.location="/admin/'.$data->id.'/addScore/0";
+            </script>';
     }
 
     public function add(string $id, string $score)
     {
         $original_row = Info::find($id);
-        $verified_row = VerifiedApplication::where('nric', $original_row->nric)->first();
+        if($score>0){
+            $verified_row = VerifiedApplication::where('nric', $original_row->nric)->first();
+            $verified_row->update(['total_score'=> $verified_row->total_score + $score]);
+            $verified_row->update(['special_situation_score'=> $score]);
+        }
 
-        $verified_row->update(['score'=> $verified_row->score + $score]);
-        $original_row->delete();
+        $original_row->update(['verified'=> true]);
         echo'
         <script>
-            history.back();
+            window.location="/admin/info";
         </script>';
+    }
+
+    
+    // override delete method
+    public function destroy($id)
+    {
+        CRUD::hasAccessOrFail('delete');
+        $verified_row  = VerifiedApplication::find($id);
+        $original_row = Info::where('nric', $verified_row->nric)->first();
+        $original_row->update(['verified'=> false]);
+        return CRUD::delete($id);
     }
 }

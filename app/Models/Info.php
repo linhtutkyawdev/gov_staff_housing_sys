@@ -29,5 +29,6 @@ class Info extends Model
         'moved_to_state_date',
         'both_couple_are_staffs_in_same_city',
         'special_situation',
+        'verified'
     ];
 }
