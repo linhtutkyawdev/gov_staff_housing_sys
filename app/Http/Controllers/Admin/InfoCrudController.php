@@ -40,7 +40,7 @@ class InfoCrudController extends CrudController
             'name'        => 'rank',
             'label'       => "Rank",
             'type'        => 'select_from_array',
-            'options'     => __('messages.RANKS'),
+            'options'     => array_combine(__('messages.RANKS'),__('messages.RANKS')),
             'allows_null' => false,
         ]);
         CRUD::field('family_count');
@@ -49,7 +49,7 @@ class InfoCrudController extends CrudController
             'name'        => 'accomodation_situation',
             'label'       => "Accomodation Situation",
             'type'        => 'select_from_array',
-            'options'     => __('messages.ACCOMODATION_SITUATIONS'),
+            'options'     => array_combine(__('messages.ACCOMODATION_SITUATIONS'),__('messages.ACCOMODATION_SITUATIONS')),
             'allows_null' => false,
         ]);
         CRUD::field('physically_form_submitted_date');
@@ -58,7 +58,7 @@ class InfoCrudController extends CrudController
             'name'        => 'both_couple_are_staffs_in_same_city',
             'label'       => "Both are staffs in same city",
             'type'        => 'select_from_array',
-            'options'     => ['No','Yes'],
+            'options'     => ['No'=>'No','Yes'=>'Yes'],
             'allows_null' => false,
         ]);
         CRUD::field('special_situation')->type('textarea');
