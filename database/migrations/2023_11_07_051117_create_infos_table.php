@@ -25,7 +25,7 @@ return new class extends Migration
             $table->date('moved_to_state_date');
             $table->string('both_couple_are_staffs_in_same_city');
             $table->string('special_situation')->nullable();
-            $table->boolean('verified')->default(false);
+            $table->boolean('verified')->default(false)->nullable();
             $table->timestamps();
         });
     }
