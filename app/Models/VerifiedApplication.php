@@ -11,7 +11,7 @@ class VerifiedApplication extends Model
     use CrudTrait;
     use HasFactory;
     protected $fillable = [
-        'nric',
+        'nrc',
         'full_name',
         'age_score',
         'experience_score',
@@ -29,6 +29,6 @@ class VerifiedApplication extends Model
     // Define the relationship with the "infos" table
     public function info()
     {
-        return $this->belongsTo(Info::class, 'nric', 'nric');
+        return $this->belongsTo(Info::class, 'nrc', 'nrc');
     }
 }

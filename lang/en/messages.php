@@ -45,7 +45,7 @@ return  [
         'desc'=> 'Please enter your information after you have physically submtted the form.',
         'fields' => [
             'Full name',
-            'NRIC',
+            'NRC',
             'Age',
             'Experience',
             // 'လက်ရှိ ရာထူး',
@@ -60,7 +60,7 @@ return  [
         ],
         'placeholders'=>[
             'full_name'=>'Mg Mg',
-            'nric'=>'0/KAKAKA(N)123456',
+            'nrc'=>'0/KAKAKA(N)123456',
             'age'=>'25',
             'experience'=>'5',
             'family_count'=>'5',
@@ -72,8 +72,8 @@ return  [
     'FOOTER' =>[
         'prompt'=>'Check Your Status',
         'prompt_found'=>'Hello ',
-        'prompt_not_found'=> 'Sorry, We can\'t find your NRIC. Make sure you have submitted the form digitally!',
-        'sub_prompt'=> 'Check the status of your application with your NRIC!',
+        'prompt_not_found'=> 'Sorry, We can\'t find your NRC. Make sure you have submitted the form digitally!',
+        'sub_prompt'=> 'Check the status of your application with your NRC!',
         'sub_prompt_found_valid'=> 'Congratulations, your informations are been varified! Wait for the administrators to contact you personally!',
         'sub_prompt_found_pending'=> 'Unfortunately, your informations are still been varifying! It\'s is important to make sure the provided informations are correct!',
         'submit'=> 'Check Now',

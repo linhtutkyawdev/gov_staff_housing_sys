@@ -5,7 +5,7 @@ use Livewire\Volt\Component;
 
 new class extends Component {
     public $full_name,
-        $nric,
+        $nrc,
         $age,
         $experience,
         $rank,
@@ -19,7 +19,7 @@ new class extends Component {
 
     private $rules = [
         'full_name' => 'required|string',
-        'nric' => 'required|string|unique:infos',
+        'nrc' => 'required|string|unique:infos',
         'age' => 'required|integer',
         'experience' => 'required|integer',
         'rank' => 'required|string',
@@ -64,13 +64,13 @@ new class extends Component {
                     </div>
 
                     <div class="sm:col-span-3">
-                        <label for="nric"
+                        <label for="nrc"
                             class="block text-sm font-medium leading-6 text-gray-900">{{ __('messages.FORM.fields.1') }}</label>
                         <div class="mt-2">
-                            <input type="text" wire:model="nric" id="nric" autocomplete="nric"
-                                placeholder={{ __('messages.FORM.placeholders.nric') }}
+                            <input type="text" wire:model="nrc" id="nrc" autocomplete="nrc"
+                                placeholder={{ __('messages.FORM.placeholders.nrc') }}
                                 class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                            @error('nric')
+                            @error('nrc')
                                 <p class="text-red-500 text-sm italic">
                                     {{ $message }}</p>
                             @enderror

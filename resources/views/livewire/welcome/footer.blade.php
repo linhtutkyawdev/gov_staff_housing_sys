@@ -4,16 +4,16 @@ use App\Models\Info;
 use Livewire\Volt\Component;
 
 new class extends Component {
-    public $nric,
+    public $nrc,
         $row,
         $not_found = false;
 
     public function checkStatus()
     {
         $validatedData = $this->validate([
-            'nric' => 'required|string',
+            'nrc' => 'required|string',
         ]);
-        $this->row = Info::where('nric', $validatedData['nric'])->first();
+        $this->row = Info::where('nrc', $validatedData['nrc'])->first();
         if (!$this->row) {
             $this->not_found = true;
         } else {
@@ -42,13 +42,13 @@ new class extends Component {
                     <div class="mt-12 subscribe-form">
                         <form class="relative focus:outline-none" wire:submit="checkStatus">
                             @csrf
-                            <input type="type" name="nric" autocomplete="nric" placeholder="Enter your NRIC"
-                                wire:model="nric"
+                            <input type="type" name="nrc" autocomplete="nrc" placeholder="Enter your nrc"
+                                wire:model="nrc"
                                 class="w-full py-4 pl-6 pr-40 duration-300 border-2 rounded focus:border-theme-color focus:outline-none">
                             <button type="submit"
                                 class="main-btn gradient-btn">{{ __('messages.FOOTER.submit') }}</button>
                         </form>
-                        @error('nric')
+                        @error('nrc')
                             <p class="text-red-500 text-sm italic">
                                 {{ $message }}</p>
                         @enderror

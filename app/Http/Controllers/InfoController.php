@@ -13,7 +13,7 @@ class InfoController extends Controller
         // Validate the form input data
         $validatedData = $request->validate([
             'full_name' => 'required|string',
-            'nric' => 'required|string',
+            'nrc' => 'required|string',
             'age' => 'required|integer',
             'exp' => 'required|integer',
             'rank' => 'required|string',

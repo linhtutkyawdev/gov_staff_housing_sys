@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('verified_applications', function (Blueprint $table) {
             $table->id();
-            $table->string('nric')->unique();
-            $table->foreign('nric')->references('nric')->on('infos');
+            $table->string('nrc')->unique();
+            $table->foreign('nrc')->references('nrc')->on('infos');
             $table->string('full_name');
             $table->integer('age_score');
             $table->integer('experience_score');

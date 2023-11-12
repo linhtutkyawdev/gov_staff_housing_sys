@@ -18,7 +18,7 @@ class Info extends Model
      */
     protected $fillable = [
         'full_name',
-        'nric',
+        'nrc',
         'age',
         'experience',
         'rank',

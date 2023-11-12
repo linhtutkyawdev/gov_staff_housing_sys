@@ -33,7 +33,7 @@ class InfoCrudController extends CrudController
         CRUD::setEntityNameStrings('info', 'application information');
 
         CRUD::field('full_name');
-        CRUD::field('nric');
+        CRUD::field('nrc');
         CRUD::field('age');
         CRUD::field('experience');
         CRUD::field([   // select_from_array
@@ -116,7 +116,7 @@ class InfoCrudController extends CrudController
     public function getInfo(string $id)
     {
         $score_row = VerifiedApplication::find($id);
-        $info_row = Info::where('nric', $score_row->nric)->first();
+        $info_row = Info::where('nrc', $score_row->nrc)->first();
         // echo $info_row;
         echo '
         <script>
@@ -129,7 +129,7 @@ class InfoCrudController extends CrudController
     {
         CRUD::hasAccessOrFail('delete');
         $info_row = Info::find($id);
-        $score_row = VerifiedApplication::where('nric', $info_row->nric)->first();
+        $score_row = VerifiedApplication::where('nrc', $info_row->nrc)->first();
         if($score_row)
             $score_row->delete();
         return CRUD::delete($id);

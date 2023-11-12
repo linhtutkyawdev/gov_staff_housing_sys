@@ -46,7 +46,7 @@ class VerifiedApplicationCrudController extends CrudController
         if (! $this->crud->getRequest()->has('total_score')){
             $this->crud->orderBy('total_score', 'desc');
         }
-        CRUD::column('nric');
+        CRUD::column('nrc');
         CRUD::column('full_name');
         CRUD::column('rank_score');
         CRUD::column('experience_score');
@@ -148,7 +148,7 @@ class VerifiedApplicationCrudController extends CrudController
 
         // Create a new record in the database
         VerifiedApplication::create([
-            'nric' => $data->nric,
+            'nrc' => $data->nrc,
             'full_name'=>$data->full_name,
             'age_score'=>$age_score,
             'experience_score'=>$experience_score,
@@ -182,7 +182,7 @@ class VerifiedApplicationCrudController extends CrudController
     {
         $original_row = Info::find($id);
         if($score>0){
-            $verified_row = VerifiedApplication::where('nric', $original_row->nric)->first();
+            $verified_row = VerifiedApplication::where('nrc', $original_row->nrc)->first();
             $verified_row->update(['total_score'=> $verified_row->total_score + $score]);
             $verified_row->update(['special_situation_score'=> $score]);
         }
@@ -200,7 +200,7 @@ class VerifiedApplicationCrudController extends CrudController
     {
         CRUD::hasAccessOrFail('delete');
         $verified_row  = VerifiedApplication::find($id);
-        $original_row = Info::where('nric', $verified_row->nric)->first();
+        $original_row = Info::where('nrc', $verified_row->nrc)->first();
         $original_row->update(['verified'=> false]);
         return CRUD::delete($id);
     }
