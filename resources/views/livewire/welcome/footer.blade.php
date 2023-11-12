@@ -55,7 +55,7 @@ new class extends Component {
                 </div>
             </div> <!-- row -->
         </div> <!-- subscribe area -->
-        <div class="footer-widget pb-120">
+        {{-- <div class="footer-widget pb-120">
             <div class="row">
                 <div class="w-4/5 md:w-3/5 lg:w-2/6">
                     <div class="mt-12 footer-about wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
@@ -118,7 +118,7 @@ new class extends Component {
                     </div> <!-- footer contact -->
                 </div>
             </div> <!-- row -->
-        </div> <!-- footer widget -->
+        </div> <!-- footer widget --> --}}
         <div class="py-8 border-t border-gray-200 footer-copyright">
             <p class="text-white">
                 All rights served by <a class="duration-300 hover:text-green-300 cursor-pointer" rel="nofollow"
