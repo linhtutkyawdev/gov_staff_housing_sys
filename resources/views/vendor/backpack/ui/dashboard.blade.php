@@ -8,6 +8,6 @@
 
 @section('content')
     <script>
-        window.location = '/admin/info'
+        window.location = '/admin/user'
     </script>
 @endsection
