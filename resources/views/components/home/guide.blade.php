@@ -27,7 +27,7 @@
 </section>
 
 
-<section class="relative pt-20 about-area">
+<section class="relative pt-20 about-area" id="second_step">
     <div class="about-shape-2">
         <img src="assets/images/about-shape-2.svg" alt="shape">
     </div>
