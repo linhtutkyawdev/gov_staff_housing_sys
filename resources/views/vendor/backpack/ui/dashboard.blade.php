@@ -7,5 +7,7 @@
 @endphp
 
 @section('content')
-    <p>Your custom HTML can live here</p>
+    <script>
+        window.location = '/admin/info'
+    </script>
 @endsection
