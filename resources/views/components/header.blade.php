@@ -53,7 +53,7 @@
                                             @continue
                                         @endif
                                         <a
-                                            href="{{ route('change-locale', ['locale' => $key]) }}">{{ strtoUpper($key) }}</a>
+                                            href="{{ route('change-locale', ['locale' => $key]) }}">{{ ($key=='en')? 'English' : 'Myanmar' }}</a>
                                     @endforeach
                                 </div>
                                 {{-- <a href={{ route('change-locale', ['locale' => locale]) }}>{{ strtoupper(locale) }}</a> --}}

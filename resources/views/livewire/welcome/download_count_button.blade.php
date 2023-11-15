@@ -18,6 +18,6 @@ new class extends Component {
 <a href="#guide" class="page-scroll flex items-center justify-center single-counter counter-color-1">
     <div class="text-center counter-items">
         <span class="text-2xl font-bold text-white"><span class="counter"> {{ $download_count }} </span></span>
-        <p class="text-white">Downloads</p>
+        <p class="text-white">{{ __('messages.STATUS.download') }}</p>
     </div>
 </a> <!-- single counter -->

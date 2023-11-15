@@ -222,14 +222,14 @@ new class extends Component {
                                     value="No"
                                     class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
                                 <label for="no"
-                                    class="block text-sm font-medium leading-6 text-gray-900">No</label>
+                                    class="block text-sm font-medium leading-6 text-gray-900">{{ __('messages.FORM.NO') }}</label>
                             </div>
                             <div class="flex items-center gap-x-3">
                                 <input wire:model="both_couple_are_staffs_in_same_city" type="radio" name="radio"
                                     value="Yes"
                                     class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600">
                                 <label for="yes"
-                                    class="block text-sm font-medium leading-6 text-gray-900">Yes</label>
+                                    class="block text-sm font-medium leading-6 text-gray-900">{{ __('messages.FORM.YES') }}</label>
                             </div>
                         </div>
                         @error('both_couple_are_staffs_in_same_city')
@@ -258,9 +258,9 @@ new class extends Component {
         </div>
 
         <div class="mt-6 flex items-center justify-end gap-x-6">
-            <a href="/" type="button" class="text-sm font-semibold leading-6 text-gray-900">Cancel</a>
+            <a href="/" type="button" class="text-sm font-semibold leading-6 text-gray-900">{{ __('messages.FORM.cancel') }}</a>
             <button type="submit"
-                class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+                class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{ __('messages.FORM.save') }}</button>
         </div>
     </form>
 </section>

@@ -35,11 +35,10 @@
                         <i class="lni lni-cog"></i>
                     </div>
                     <div class="mt-8 services-content">
-                        <h4 class="mb-8 text-xl font-bold text-gray-900">Application Status Tracking</h4>
-                        <p class="mb-8">Applicants can conveniently track the progress of their housing application
-                            through the system, reducing the need for direct inquiries.</p>
-                        <a class="duration-300 hover:text-theme-color page-scroll" href="#status-check">Try <i
-                                class="ml-2 lni lni-chevron-right"></i></a>
+                        <h4 class="mb-8 text-xl font-bold text-gray-900">{{ __('messages.FEATURES')[1]['title'] }}</h4>
+                        <p class="mb-8">{{ __('messages.FEATURES')[1]['desc'] }}</p>
+                        
+                                
                     </div>
                 </div> <!-- single services -->
             </div>
@@ -51,9 +50,8 @@
                         <i class="lni lni-bolt-alt"></i>
                     </div>
                     <div class="mt-8 services-content">
-                        <h4 class="mb-8 text-xl font-bold text-gray-900">Scoring System</h4>
-                        <p class="mb-8">A robust scoring system allows administrators to assess and rank applicants
-                            based on specific criteria, ensuring transparent and data-driven housing allocation.</p>
+                        <h4 class="mb-8 text-xl font-bold text-gray-900">{{ __('messages.FEATURES')[2]['title'] }}</h4>
+                        <p class="mb-8">{{ __('messages.FEATURES')[2]['desc'] }}</p>
                         <a class="duration-300 hover:text-theme-color" href="/#status-check">Try <i
                                 class="ml-2 lni lni-chevron-right"></i></a>
                     </div>

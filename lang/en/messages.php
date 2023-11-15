@@ -24,6 +24,15 @@ return  [
             'cta'=> 'Fill Essential Information'
         ],
     ],
+    'STATUS'=>[
+            'title'=> 'Check Status',
+            'sub-title'=> 'of your application.',
+            'desc'=> 'Stay informed about the progress of your housing application. You can easily track the status of your application, whether it\'s pending, approved, or rejected.',
+            'download'=>'Downloads',
+            'info'=>'Filled Info'
+        ],  
+
+    
     'FEATURES_TITLE' => 'Streamlined Application Process',
     'FEATURES_DESC' => 'Making the housing application process more streamlined and efficient while improving transparency and communication!',
     'FEATURES' => [
@@ -67,6 +76,10 @@ return  [
             'elders_and_kids_count'=>'2',
         ],
         'DEFAULT_SELECT'=>'Please Choose',
+        'YES'=>'Yes',
+        'NO'=>'No',
+        'cancel'=>'Cancel',
+        'save'=>'Save',
     ],
     
     'FOOTER' =>[
@@ -80,6 +93,6 @@ return  [
     ],
     
     // RULE_OPTIONS
-    'RANKS' => ['r1','r2','r3','r4','r5','r6'],
-    'ACCOMODATION_SITUATIONS' => ['A1','A2','A3','A4'],
+    'RANKS' => ['Upper/Lower Divisional Clerk','Office Superintendent/Deputy Staff Officier/Branch Clerk','Staff Officier','Assistant Director','Deputy Director','Director'],
+    'ACCOMODATION_SITUATIONS' => ['Office','Relative Home','Friends','Tenants'],
 ];

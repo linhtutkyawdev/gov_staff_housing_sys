@@ -48,11 +48,7 @@ class VerifiedApplicationCrudController extends CrudController
         }
         CRUD::column('nrc');
         CRUD::column('full_name');
-        CRUD::column('rank_score');
-        CRUD::column('experience_score');
-        CRUD::column('age_score');
-        CRUD::column('total_score');
-        CRUD::setFromDb(); // set columns from db columns.
+        CRUD::column('total_score')->type('range');
         
         CRUD::addButtonFromView('line', 'show_info', 'showInfo', 'beginning');
         CRUD::orderButtons('line', [ 'show_info', 'show', 'delete']);

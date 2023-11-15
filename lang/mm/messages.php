@@ -1,47 +1,96 @@
 <?php
 
 return  [
-    'TITLE' => 'Government Staff Housing System',
+    'TITLE' => 'အစိုးရဝန်ထမ်းအိမ်ရာစနစ်',
     'TITLE_SHORT' => 'GSHS',
     'LOGO_URL' => 'assets/images/logo.svg',
     'NAV_LINKS' => ['Home','Guide','Services','Status'],
     'FORM_NAME' => 'အိမ်ခန်းလျှောက်လွှာ',
     'CTA_TEXT' => 'Download Form',
-    'CTA_TEXT_2' => 'Get Started',
-    'QUOTE' => 'Here\'s your guide.',
-    'DESCRIPTION' => 'We aim to digitally solve the necessity of providing guidance on staff-housing requests.',
+    'CTA_TEXT_2' => 'စတင်လိုက်ပါ။',
+    'QUOTE' => 'ဤသည်မှာ သင်၏လမ်းညွှန်ဖြစ်သည်။.',
+    'DESCRIPTION' => 'ဝန်ထမ်းအိမ်ရာတောင်းဆိုမှုများအပေါ် လမ်းညွှန်မှုပေးဆောင်ရန် လိုအပ်ချက်များကို ဒစ်ဂျစ်တယ်စနစ်ဖြင့် ဖြေရှင်းရန် ရည်ရွယ်ပါသည်။.',
     'GUIDE'=> [
         [
             'title'=> 'ပထမ အဆင့်',
-            'sub-title'=> 'is to Download an Application Form',
-            'desc'=> 'The first step is to "Download an Application Form." This step offers applicants the opportunity to access the official housing application form, a vital document required to initiate the application process. Click the following download button to doenlad the form. This form is for submitting physically.',
-            'cta'=> 'Download Form'
+            'sub-title'=> 'လျှောက်လွှာပုံစံကို ဒေါင်းလုဒ်လုပ်ရန်ဖြစ်သည်။',
+            'desc'=> 'ပထမအဆင့်မှာ "လျှောက်လွှာပုံစံကို ဒေါင်းလုဒ်လုပ်ပါ။" ဤအဆင့်သည် လျှောက်ထားသူများအား တရားဝင်အိမ်ရာလျှောက်လွှာပုံစံကို ဝင်ရောက်ကြည့်ရှုခွင့် ပေးထားပြီး လျှောက်လွှာလုပ်ငန်းစဉ်ကို စတင်ရန်အတွက် အရေးကြီးသောစာရွက်စာတမ်းဖြစ်သည်။ ဖောင်တင်ရန် အောက်ပါဒေါင်းလုဒ်ခလုတ်ကို နှိပ်ပါ။ ဤဖောင်သည် ရုပ်ပိုင်းဆိုင်ရာ တင်ပြခြင်းအတွက်ဖြစ်သည်။',
+            'cta'=> 'ဖောင်ကို ဒေါင်းလုဒ်လုပ်ပါ။'
         ],
         [
-            'title'=> 'Second Step',
-            'sub-title'=> 'is to Enter Essential Informations',
-            'desc'=> 'During this step, applicants are prompted to provide fundamental details required for their housing application. This typically includes personal information, employment history, family size, and other key criteria necessary for evaluating their eligibility for government housing.',
-            'cta'=> 'Fill Essential Information'
+            'title'=> 'ဒုတိယအဆင့်',
+            'sub-title'=> 'မရှိမဖြစ်လိုအပ်သော အချက်အလက်များကို ထည့်သွင်းရန်ဖြစ်သည်။',
+            'desc'=> 'ဤအဆင့်တွင် လျှောက်ထားသူများသည် ၎င်းတို့၏ အိမ်ရာလျှောက်လွှာအတွက် လိုအပ်သော အခြေခံအသေးစိတ်အချက်အလက်များကို ပေးဆောင်ရန် နှိုးဆော်ထားသည်။ ၎င်းတွင် ပုံမှန်အားဖြင့် ကိုယ်ရေးကိုယ်တာအချက်အလက်များ၊ အလုပ်အကိုင်မှတ်တမ်း၊ မိသားစုအရွယ်အစားနှင့် အစိုးရအိမ်ရာများအတွက် ၎င်းတို့၏အရည်အချင်းပြည့်မီမှုကို အကဲဖြတ်ရန်အတွက် လိုအပ်သော အခြားသော့ချက်စံနှုန်းများ ပါဝင်ပါသည်။.',
+            'cta'=> 'မရှိမဖြစ် အချက်အလက်များ ဖြည့်စွက်ပါ။'
         ],
     ],
-    'FEATURES_TITLE' => 'Streamlined Application Process',
-    'FEATURES_DESC' => 'Making the housing application process more streamlined and efficient while improving transparency and communication!',
+    'STATUS'=>[
+        'title'=> 'သင်၏လျှောက်လွှာ',
+        'sub-title'=> 'အခြေအနေကို စစ်ဆေးပါ။',
+        'desc'=> 'သင့်အိမ်ရာလျှောက်လွှာ၏ တိုးတက်မှုအကြောင်း အသိပေးပါ။ ဆိုင်းငံ့ထားသည်ဖြစ်စေ၊ အတည်ပြုသည်ဖြစ်စေ သို့မဟုတ် ငြင်းပယ်သည်ဖြစ်စေ သင့်လျှောက်လွှာ၏အခြေအနေကို အလွယ်တကူခြေရာခံနိုင်ပါသည်။',
+        'download'=>'ဒေါင်းလုဒ်များ',
+        'info'=>'အချက်အလက် အပြည့်အစုံ'
+    ],  
+    'FEATURES_TITLE' => 'သွက်လက်သော လျှောက်လွှာလုပ်ငန်းစဉ်',
+    'FEATURES_DESC' => 'ပွင့်လင်းမြင်သာမှုနှင့် ဆက်သွယ်ရေးကို တိုးတက်စေပြီး အိမ်ရာလျှောက်လွှာလုပ်ငန်းစဉ်ကို ပိုမိုချောမွေ့ပြီး ထိရောက်မှုဖြစ်စေသည်။',
     'FEATURES' => [
         [
-            'title'=> 'Guided Application Process',
-            'desc'=> 'Provide step-by-step guidance to applicants, making the housing application process more straightforward and user-friendly.'
+            'title'=> 'လမ်းညွှန်လျှောက်ထားခြင်းလုပ်ငန်းစဉ်',
+            'desc'=> 'လျှောက်ထားသူများကို အဆင့်ဆင့်လမ်းညွှန်ပေးခြင်းဖြင့် အိမ်ရာလျှောက်လွှာတင်ခြင်းလုပ်ငန်းစဉ်ကို ပိုမိုရိုးရှင်းပြီး အသုံးပြုရလွယ်ကူစေပါသည်။.'
         ],
         [
-            'title'=> 'Scoring System',
-            'desc'=> 'A robust scoring system allows administrators to assess and rank applicants based on specific criteria, ensuring transparent and data-driven housing allocation.'
+            'title'=> 'အမှတ်ပေးစနစ်',
+            'desc'=> 'ခိုင်မာသော အမှတ်ပေးစနစ်သည် စီမံခန့်ခွဲသူများသည် တိကျသောစံနှုန်းများအပေါ် အခြေခံ၍ လျှောက်ထားသူများအား ပွင့်လင်းမြင်သာမှုနှင့် ဒေတာဖြင့် အိမ်ရာခွဲဝေပေးခြင်းကို အာမခံနိုင်စေပါသည်။.'
         ],
         [
-            'title'=> 'Application Status Tracking',
-            'desc'=> 'Applicants can conveniently track the progress of their housing application through the system, providing transparency and reducing the need for direct inquiries.'
-        ]
+            'title'=> 'လျှောက်လွှာအခြေအနေ ခြေရာခံခြင်း။',
+            'desc'=> 'လျှောက်ထားသူများသည် ၎င်းတို့၏ အိမ်ရာလျှောက်လွှာ၏ တိုးတက်မှုကို လွယ်ကူစွာ ခြေရာခံနိုင်ပြီး ပွင့်လင်းမြင်သာမှုနှင့် တိုက်ရိုက်စုံစမ်းမေးမြန်းရန် လိုအပ်မှုကို လျှော့ချပေးသည့်စနစ်၊.'
+        ],
+    ],
+    'FORM' => [
+        'title'=> 'လိုအပ်သော အချက်အလက်များ',
+        'desc'=> 'ဖောင်ကို သွင်းပြီးပါက သင့်အချက်အလက်များကို ထည့်သွင်းပါ။.',
+        'fields' => [
+            'အမည်',
+            'နိုင်ငံသားစိစစ်ရေးကဒ်ပြားအမှတ်',
+            'ဝန်ထမ်း၏ အသက်အရွယ်',
+            'ဝန်ထမ်းလုပ်သက်',
+            // 'လက်ရှိ ရာထူး',
+            ' ဝန်ထမ်း၏ ရာထူးအဆင့်အတန်း',
+            'အတူနေထိုင်သူ မိသားစုဦးရေ',
+            'အသက်(၇၀)နှစ်အထက် သက်ကြီးရွယ်အိုနှင့် အသက်(၅)နှစ်အောက် ကလေးပါဝင်မှု',
+            'လက်ရှိနေထိုင်မှုပုံစံ(ဌား/အမျိုးအိမ်နေ/မိတ်ဆွေနှင့် အတူနေ)',
+            'လျှောက်လွှာစတင်၍ တင်ပြထားသော ကာလ',
+            'အခြားမြို့မှ လက်ရှိမြို့သို့ ပြောင်းရွှေ့တာဝန် ထမ်းဆောင်သည့်ကာလ',
+            'ခင်ပွန်း(သို့)ဇနီး (၂)ဦးစလုံးသည် တစ်မြို့
+            ထဲတွင် တာဝန်ထမ်းဆောင်နေခြင်းရှိ/မရှိ',
+            'သီးခြားအခြေအနေတစ်ရပ်ရပ်ကြောင့် ခွင့်ပြုရန် လိုအပ်ချက်'
+        ],
+        'placeholders'=>[
+            'full_name'=>'Mg Mg',
+            'nrc'=>'0/KAKAKA(N)123456',
+            'age'=>'25',
+            'experience'=>'5',
+            'family_count'=>'5',
+            'elders_and_kids_count'=>'2',
+        ],
+        'DEFAULT_SELECT'=>'ရွေးချယ်ပါ',
+        'YES'=>'ရှိ',
+        'NO'=>'မရှိ',
+        'cancel'=>'မလုပ်တော့ပါ',
+        'save'=>'သိမ်းမည်',
     ],
     
+    'FOOTER' =>[
+        'prompt'=>'သင်၏ အခြေအနေကို စစ်ဆေးပါ။',
+        'prompt_found'=>'Hello ',
+        'prompt_not_found'=> 'ဝမ်းနည်းပါတယ်၊ သင်၏ NRC ကို ရှာမတွေ့ပါ။ ဖောင်ကို ဒစ်ဂျစ်တယ်စနစ်ဖြင့် တင်သွင်းထားကြောင်း သေချာပါစေ။',
+        'sub_prompt'=> 'သင်၏ NRC ဖြင့် သင့်လျှောက်လွှာ၏အခြေအနေကို စစ်ဆေးပါ။',
+        'sub_prompt_found_valid'=> 'ဂုဏ်ယူပါသည်၊ သင်၏အချက်အလက်များကို ကွဲလွဲစေပါသည်။ စီမံခန့်ခွဲသူများသည် သင့်အား ပုဂ္ဂိုလ်ရေးအရ ဆက်သွယ်ရန် စောင့်ပါ။',
+        'sub_prompt_found_pending'=> 'ကံမကောင်းစွာပဲ၊ သင့်အချက်အလက်များသည် ပြောင်းလဲနေဆဲဖြစ်သည်။ ပေးထားသော အချက်အလက်များသည် မှန်ကန်ကြောင်း သေချာစေရန် အရေးကြီးပါသည်။',
+        'submit'=> 'ယခုစစ်ဆေးပါ။',
+    ],
     //RULES
-    'RANKS' => ['r1','r2','r3','rm4','rm5','rm6'],
-    'ACCOMODATION_SITUATIONS' => ['A1','A2','A3','A4'],
+    'RANKS' => ['ကြီးရေး/ငယ်ရေး','ရုံးအုပ်/ဒု-ဦးစီးမှူး/ဌာနခွဲစာရေး','ဦးစီးအရာရှိ','လ/ထညွှန်ကြားရေးမှူး','ဒုတိယညွှန်ကြားရေးမှူး','ညွှန်ကြား‌ရေးမှူး'],
+    'ACCOMODATION_SITUATIONS' => ['(က)ရုံးဌာနတွင်နေ','(ခ) အမျိုးအိမ်နေ','(ဂ) မိတ်ဆွေအိမ်နေ','(ဃ) အိမ်ဌားနေ'],
 ];

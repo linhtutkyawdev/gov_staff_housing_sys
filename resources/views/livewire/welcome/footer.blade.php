@@ -42,7 +42,7 @@ new class extends Component {
                     <div class="mt-12 subscribe-form">
                         <form class="relative focus:outline-none" wire:submit="checkStatus">
                             @csrf
-                            <input type="type" name="nrc" autocomplete="nrc" placeholder="Enter your nrc"
+                            <input type="type" name="nrc" autocomplete="nrc" placeholder="Enter your NRC"
                                 wire:model="nrc"
                                 class="w-full py-4 pl-6 pr-40 duration-300 border-2 rounded focus:border-theme-color focus:outline-none">
                             <button type="submit"
