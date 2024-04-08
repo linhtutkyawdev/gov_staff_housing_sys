@@ -18,27 +18,29 @@ php artisan serve
 
 ## Secreenshots
 
-![Hero](https://github.com/linhtutkyawdev/gov_staff_housing_sys/blob/master/public/assets/images/screenshots/s-1.png?raw=true)
+![](https://raw.githubusercontent.com/linhtutkyawdev/gov_staff_housing_sys/main/public/assets/images/screenshots/s-1.png)
 
-![Hero](https://github.com/linhtutkyawdev/gov_staff_housing_sys/blob/master/public/assets/images/screenshots/s-2.png?raw=true)
+![](https://raw.githubusercontent.com/linhtutkyawdev/gov_staff_housing_sys/main/public/assets/images/screenshots/s-1.png)
 
-![Hero](https://github.com/linhtutkyawdev/gov_staff_housing_sys/blob/master/public/assets/images/screenshots/s-3.png?raw=true)
+![](https://raw.githubusercontent.com/linhtutkyawdev/gov_staff_housing_sys/main/public/assets/images/screenshots/s-2.png)
 
-![Hero](https://github.com/linhtutkyawdev/gov_staff_housing_sys/blob/master/public/assets/images/screenshots/s-4.png?raw=true)
+![](https://raw.githubusercontent.com/linhtutkyawdev/gov_staff_housing_sys/main/public/assets/images/screenshots/s-3.png)
 
-![Hero](https://github.com/linhtutkyawdev/gov_staff_housing_sys/blob/master/public/assets/images/screenshots/s-5.png?raw=true)
+![](https://raw.githubusercontent.com/linhtutkyawdev/gov_staff_housing_sys/main/public/assets/images/screenshots/s-4.png)
 
-![Hero](https://github.com/linhtutkyawdev/gov_staff_housing_sys/blob/master/public/assets/images/screenshots/s-6.png?raw=true)
+![](https://raw.githubusercontent.com/linhtutkyawdev/gov_staff_housing_sys/main/public/assets/images/screenshots/s-5.png)
 
-![Hero](https://github.com/linhtutkyawdev/gov_staff_housing_sys/blob/master/public/assets/images/screenshots/s-7.png?raw=true)
+![](https://raw.githubusercontent.com/linhtutkyawdev/gov_staff_housing_sys/main/public/assets/images/screenshots/s-6.png)
 
-![Hero](https://github.com/linhtutkyawdev/gov_staff_housing_sys/blob/master/public/assets/images/screenshots/s-8.png?raw=true)
+![](https://raw.githubusercontent.com/linhtutkyawdev/gov_staff_housing_sys/main/public/assets/images/screenshots/s-7.png)
 
-![Hero](https://github.com/linhtutkyawdev/gov_staff_housing_sys/blob/master/public/assets/images/screenshots/s-9.png?raw=true)
+![](https://raw.githubusercontent.com/linhtutkyawdev/gov_staff_housing_sys/main/public/assets/images/screenshots/s-8.png)
 
-![Hero](https://github.com/linhtutkyawdev/gov_staff_housing_sys/blob/master/public/assets/images/screenshots/s-10.png?raw=true)
+![](https://raw.githubusercontent.com/linhtutkyawdev/gov_staff_housing_sys/main/public/assets/images/screenshots/s-9.png)
 
-![Hero](https://github.com/linhtutkyawdev/gov_staff_housing_sys/blob/master/public/assets/images/screenshots/s-11.png?raw=true)
+![](https://raw.githubusercontent.com/linhtutkyawdev/gov_staff_housing_sys/main/public/assets/images/screenshots/s-10.png)
+
+![](https://raw.githubusercontent.com/linhtutkyawdev/gov_staff_housing_sys/main/public/assets/images/screenshots/s-11.png)
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
