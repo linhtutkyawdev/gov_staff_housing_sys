@@ -1,6 +1,6 @@
 <?php
 
-use Closure;
+use Closure\fromCollable;
 
 return [
     'RANKS_SCORES' => [3,5,10,15,18,20],
